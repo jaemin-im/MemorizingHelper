@@ -1,4 +1,5 @@
 import mhinfo
+import sqlite3
 
 print('Term Memorizing Program with Python: v{}'.format(mhinfo.version))
 print('1. Add Term')
