@@ -1,8 +1,9 @@
 import mhinfo
 import sqlite3
+import termdef as td
 
-con = sqlite3.connect("./term.db")
-cursor = con.cursor()
+# con = sqlite3.connect("./term.db")
+# cursor = con.cursor()
 
 print('Term Memorizing Program with Python: v{}'.format(mhinfo.version))
 print('1. Add Term')
@@ -14,7 +15,7 @@ print('0. Exit')
 select = int(input("Input the number:\n"))
 
 if select == 1:
-    pass # Add Term
+    td.addterm() # Add Term
 elif select == 2:
     pass # Modify Term
 elif select == 3:
@@ -23,5 +24,4 @@ elif select == 4:
     pass # Test Term
 elif select == 0:
     print('Interrupting Program. Bye!')
-    con.close()
     exit()
