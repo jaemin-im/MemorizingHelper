@@ -9,5 +9,10 @@ def addterm():
     term = str(input("Input the term: "))
     mean = str(input("Input the mean: "))
     date = (datetime.datetime.now()).strftime('%Y%m%d')
-    cursor.execute("INSERT INTO term VALUES({}, {}, {}, {}, {})".format(date, term, mean, 0, 0))
+    try:
+        cursor.execute("INSERT INTO term VALUES({}, {}, {}, {}, {})".format(date, term, mean, 0, 0))
+        # TODO: modify db inserting system: error occurs in multi-string input.
+    except:
+        print("Error has occured while adding term to database.")
+        return
     print('Added {}: {} (Marked: {}, Memorized: {}) on {}'.format(term, mean, 0, 0, date))
