@@ -13,6 +13,7 @@ while select != 0:
     print('2. Modify Term')
     print('3. Practice Term')
     print('4. Test Term')
+    print('5. Search Term')
     print('0. Exit')
 
     select = int(input("Input the number:\n"))
@@ -25,6 +26,8 @@ while select != 0:
         pass # Practice Term
     elif select == 4:
         pass # Test Term
+    elif select == 5:
+        td.searchterm() # Search Term
     elif select == 0:
         print('Interrupting Program. Bye!')
         exit()

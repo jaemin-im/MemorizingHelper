@@ -9,3 +9,5 @@
 sqlite3 DB 추가, 초기화
 ## 4. v1.0.3
 addterm 기능 추가
+## 5. v1.0.4 - Developing
+searchterm 기능 추가

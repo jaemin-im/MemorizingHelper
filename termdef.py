@@ -15,3 +15,23 @@ def addterm():
         print("Error has occured while adding term to database.")
         return
     print('Added {}: {} (Marked: {}, Memorized: {}) on {}'.format(term, mean, 0, 0, date))
+
+def modterm():
+    pass
+
+def practerm():
+    pass
+
+def testterm():
+    pass
+
+def searchterm():
+    print("You should input the term to search.")
+    term = str(input("input the term: "))
+    try:
+        cursor.execute("SELECT * FROM term WHERE Term=\'{}\'".format(term))
+        result = cursor.fetchall()
+    except:
+        print("Error has occured while searching term in database.")
+        return
+    print('Found {}!'.format(result))
